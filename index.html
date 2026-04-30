@@ -1,0 +1,979 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Flyhigh Travels | Your Gateway to Adventure</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header / Navbar -->
+    <header>
+      <nav class="navbar">
+        <img
+          src="flyhigh travels.png"
+          alt="Flyhigh Travels Logo"
+          class="logo"
+          height="90px"
+        />
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#Testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <a href="#" id="bookNowBtn">
+          <button class="pushable">
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front">Book Now</span>
+          </button>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <div class="hero-section" id="home">
+        <div class="hero-content">
+          <video src="hero-video2.mp4" autoplay muted loop playsinline></video>
+          <div class="overlay"></div>
+          <div class="hero-content-parent">
+            <h1><span id="typing-text"></span></h1>
+            <p>Affordable Tours, Memorable Journeys</p>
+            <div class="hero-btns">
+              <a href="#packages"
+                ><button class="hero-section-btn primary-btn">
+                  Explore Packages
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Search / Booking Section -->
+        <section class="booking-section">
+          <div class="booking-box">
+            <div class="field">
+              <label>Destination</label>
+              <input
+                id="searchDestinationInput"
+                type="text"
+                placeholder="🌍 Where are you going?"
+              />
+            </div>
+            <div class="field">
+              <label>Check-in</label>
+              <input id="searchCheckInInput" type="date" />
+            </div>
+            <div class="field">
+              <label>Check-out</label>
+              <input type="date" />
+            </div>
+            <div class="field">
+              <label>Guests</label>
+              <select>
+                <option>1 Guest</option>
+                <option>2 Guests</option>
+                <option>3 Guests</option>
+                <option>Family</option>
+              </select>
+            </div>
+            <div class="search-btn">
+              <button id="searchTripsBtn">Search Trips</button>
+            </div>
+          </div>
+          <div class="search-results" id="searchResults" style="display: none">
+            <div class="results-title">
+              <h3>Suggested Trips</h3>
+              <p>Click a trip to explore more or book your favorite package.</p>
+            </div>
+            <div class="results-grid" id="resultsGrid"></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- About Us Section -->
+      <section class="about-section" id="about">
+        <div class="about-container">
+          <div class="about-img">
+            <img src="about-img.jpg" alt="Travel Experience" height="350px" />
+          </div>
+          <div class="about-content">
+            <h2>About Us</h2>
+            <p>
+              Welcome to Flyhigh Travels, your trusted partner for unforgettable
+              journeys. We specialize in creating personalized travel
+              experiences that cater to your unique preferences and budget.
+            </p>
+            <div class="about-points">
+              <div class="point">
+                <span class="icon">✔</span>
+                <p>Customized Travel Packages</p>
+              </div>
+              <div class="point">
+                <span class="icon">✔</span>
+                <p>Affordable Pricing</p>
+              </div>
+              <div class="point">
+                <span class="icon">✔</span>
+                <p>Experienced Travel Experts</p>
+              </div>
+              <div class="point">
+                <span class="icon">✔</span>
+                <p>24/7 Customer Support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us Section -->
+      <section class="why-choose-us" id="why-us">
+        <div class="section-header">
+          <span>Why Choose Flyhigh</span>
+          <h2>Travel with confidence and comfort</h2>
+          <p>
+            We make every trip effortless with tailored itineraries, trusted
+            support, and seamless booking for every kind of traveller.
+          </p>
+        </div>
+        <div class="why-cards">
+          <article class="why-card">
+            <div class="why-icon">✈</div>
+            <h3>Expert Planning</h3>
+            <p>
+              Our travel specialists craft every experience with local insight,
+              luxury options, and smooth logistics.
+            </p>
+          </article>
+          <article class="why-card">
+            <div class="why-icon">💼</div>
+            <h3>Trusted Support</h3>
+            <p>
+              From booking to return, our team is available around the clock to
+              assist you at every step.
+            </p>
+          </article>
+          <article class="why-card">
+            <div class="why-icon">🧳</div>
+            <h3>Value & Flexibility</h3>
+            <p>
+              Transparent pricing, flexible packages, and custom upgrades ensure
+              your travel is designed to fit your needs.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Popular Destinations Section -->
+      <section class="destinations" id="destinations">
+        <h2 class="section-title">Popular Destinations</h2>
+        <div class="destination-container">
+          <div class="destination-card">
+            <div class="image-box">
+              <a href="bali.html"
+                ><img src="bali.jpg" alt="bali" height="200px"
+              /></a>
+            </div>
+            <h3>Bali, Indonesia</h3>
+            <p>Tropical Paradise Awaits</p>
+          </div>
+          <div class="destination-card">
+            <div class="image-box">
+              <a href="dubai.html"
+                ><img src="dubai.jpg" alt="dubai" height="200px"
+              /></a>
+            </div>
+            <h3>Dubai, UAE</h3>
+            <p>Experience the Luxury of the Desert</p>
+          </div>
+          <div class="destination-card">
+            <div class="image-box">
+              <a href="goa.html"
+                ><img src="goa.jpg" alt="goa" height="200px"
+              /></a>
+            </div>
+            <h3>Goa, India</h3>
+            <p>Beach Vibes Only</p>
+          </div>
+          <div class="destination-card">
+            <div class="image-box">
+              <a href="manali.html"
+                ><img src="manali.jpg" alt="manali" height="200px"
+              /></a>
+            </div>
+            <h3>Manali, India</h3>
+            <p>Mountain Retreat</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Packages Section -->
+      <section class="packages" id="packages">
+        <h3 class="package-title">Travel Packages</h3>
+        <div class="packages-container">
+          <div class="package-card">
+            <div class="package-img">
+              <img src="dubai-tour.jpg" alt="dubai-tour" height="200px" />
+            </div>
+            <div class="package-content">
+              <h3>Dubai Luxury Tour</h3>
+              <p class="duration">🕒 5 Days / 4 Nights</p>
+              <p class="rating">⭐⭐⭐⭐⭐</p>
+              <p class="price">₹45,999</p>
+              <button class="pushable book-btn">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front">Book Now</span>
+              </button>
+            </div>
+          </div>
+          <div class="package-card">
+            <div class="package-img">
+              <img src="goa-tour.jpg" alt="goa-tour" height="200px" />
+            </div>
+            <div class="package-content">
+              <h3>Goa Beach Package</h3>
+              <p class="duration">🕒 3 Days / 2 Nights</p>
+              <p class="rating">⭐⭐⭐⭐</p>
+              <p class="price">₹12,999</p>
+              <button class="pushable book-btn">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front">Book Now</span>
+              </button>
+            </div>
+          </div>
+          <div class="package-card">
+            <div class="package-img">
+              <img src="manali-tour.jpg" alt="manali-tour" height="200px" />
+            </div>
+            <div class="package-content">
+              <h3>Manali Snow Trip</h3>
+              <p class="duration">🕒 4 Days / 3 Nights</p>
+              <p class="rating">⭐⭐⭐⭐⭐</p>
+              <p class="price">₹9,999</p>
+              <button class="pushable book-btn">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front">Book Now</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <div class="testimonials-section" id="Testimonials">
+        <div class="section-header">
+          <div class="subtitle">⭐ Real Experiences</div>
+          <h2>Customer Testimonials ⭐⭐⭐⭐⭐</h2>
+          <div class="tagline">
+            What our travelers say about their journey with us
+          </div>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="customer-profile">
+              <img
+                class="customer-photo"
+                src="https://randomuser.me/api/portraits/women/68.jpg"
+                alt="Sarah M."
+              />
+              <div class="customer-info">
+                <h3>Sarah Mitchell</h3>
+                <div class="customer-location">
+                  <span>📍</span> New York, USA
+                </div>
+              </div>
+            </div>
+            <div class="rating"><span class="star">★★★★★</span></div>
+            <div class="review-text">
+              Absolutely amazing experience! The team planned our entire Bali
+              honeymoon perfectly. Every detail was taken care of — from airport
+              transfers to hidden local gems. Can't wait to book again!
+            </div>
+            <div class="destination-badge">✈️ Bali, Indonesia</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="customer-profile">
+              <img
+                class="customer-photo"
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Vikram S."
+              />
+              <div class="customer-info">
+                <h3>Vikram Sharma</h3>
+                <div class="customer-location">
+                  <span>📍</span> Mumbai, India
+                </div>
+              </div>
+            </div>
+            <div class="rating"><span class="star">★★★★★</span></div>
+            <div class="review-text">
+              Hassle-free trip from start to finish! Their 24/7 support team
+              helped us during a late-night flight delay in Bangkok.
+              Professional, responsive, and genuinely caring.
+            </div>
+            <div class="destination-badge">🏝️ Phuket, Thailand</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="customer-profile">
+              <img
+                class="customer-photo"
+                src="https://randomuser.me/api/portraits/women/45.jpg"
+                alt="Emily R."
+              />
+              <div class="customer-info">
+                <h3>Emily Rodriguez</h3>
+                <div class="customer-location"><span>📍</span> London, UK</div>
+              </div>
+            </div>
+            <div class="rating"><span class="star">★★★★★</span></div>
+            <div class="review-text">
+              Best travel agency I've ever used! The Switzerland package was
+              worth every penny. Hotels, local guides, and activities were
+              top-notch. I've already referred 4 friends!
+            </div>
+            <div class="destination-badge">🗻 Swiss Alps, Switzerland</div>
+          </div>
+        </div>
+        <div class="cta-wrapper">
+          <a href="#" class="btn-outline">📖 Read All 1,200+ Reviews →</a>
+        </div>
+      </div>
+
+      <!-- Gallery Section -->
+      <section class="gallery-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="badge">📸 Memories Await</span>
+            <h2>Travel Gallery</h2>
+            <p class="subtitle">
+              Explore breathtaking destinations captured by our travelers
+            </p>
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-card">
+              <div class="image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=450&fit=crop"
+                  alt="Tropical Beach Paradise"
+                  class="gallery-image"
+                />
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <span class="emoji-icon">🏖️</span>
+                    <h3>Paradise Beaches</h3>
+                    <p>Maldives • Thailand • Bali</p>
+                    <a href="beaches.html"
+                      ><span class="view-btn">View Album →</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <span class="category-tag">🏖️ Beaches</span>
+                <span class="photo-count">24+ photos</span>
+              </div>
+            </div>
+            <div class="gallery-card">
+              <div class="image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&h=450&fit=crop"
+                  alt="Mountain Adventure"
+                  class="gallery-image"
+                />
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <span class="emoji-icon">🏔️</span>
+                    <h3>Majestic Mountains</h3>
+                    <p>Swiss Alps • Himalayas • Rockies</p>
+                    <a href="mountains.html"
+                      ><span class="view-btn">View Album →</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <span class="category-tag">🏔️ Mountains</span>
+                <span class="photo-count">18+ photos</span>
+              </div>
+            </div>
+            <div class="gallery-card">
+              <div class="image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&h=450&fit=crop"
+                  alt="Luxury Flights"
+                  class="gallery-image"
+                />
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <span class="emoji-icon">✈️</span>
+                    <h3>Sky & Flights</h3>
+                    <p>Business Class • Sunset Views</p>
+                    <a href="sky&flights.html"
+                      ><span class="view-btn">View Album →</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <span class="category-tag">✈️ Flights</span>
+                <span class="photo-count">32+ photos</span>
+              </div>
+            </div>
+            <div class="gallery-card wide-card">
+              <div class="image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=450&fit=crop"
+                  alt="Luxury Resorts"
+                  class="gallery-image"
+                />
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <span class="emoji-icon">🏨</span>
+                    <h3>Luxury Resorts</h3>
+                    <p>5-Star Stays • Infinity Pools • Spa Retreats</p>
+                    <a href="resorts.html"
+                      ><span class="view-btn">View Album →</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <span class="category-tag">🏨 Resorts</span>
+                <span class="photo-count">41+ photos</span>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-cta">
+            <a href="#" class="btn-primary"
+              >📷 Explore Full Gallery <span class="arrow">→</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Us Section -->
+      <section class="contact-section" id="contact">
+        <div class="contact-container">
+          <div class="contact-header">
+            <span class="contact-badge">📞 Get in Touch</span>
+            <h2>Contact Us</h2>
+            <p>
+              Have questions? Our travel experts are here to help you plan your
+              perfect journey.
+            </p>
+          </div>
+          <div class="contact-wrapper">
+            <div class="contact-form-container">
+              <div class="form-card">
+                <h3>Send Us a Message</h3>
+                <form class="contact-form" id="contactForm">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label>Full Name <span class="required">*</span></label>
+                      <input type="text" placeholder="John Doe" required />
+                    </div>
+                    <div class="form-group">
+                      <label
+                        >Email Address <span class="required">*</span></label
+                      >
+                      <input
+                        type="email"
+                        placeholder="john@example.com"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label>Phone Number</label>
+                      <input type="tel" placeholder="+1 234 567 8900" />
+                    </div>
+                    <div class="form-group">
+                      <label>Subject <span class="required">*</span></label>
+                      <select required>
+                        <option value="">Select Subject</option>
+                        <option value="booking">Booking Inquiry</option>
+                        <option value="package">Custom Package</option>
+                        <option value="support">Customer Support</option>
+                        <option value="feedback">Feedback</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group full-width">
+                    <label>Message <span class="required">*</span></label>
+                    <textarea
+                      rows="5"
+                      placeholder="Tell us about your travel plans..."
+                      required
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="submit-btn">
+                    Send Message <span class="btn-arrow">→</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="contact-info-container">
+              <div class="info-card">
+                <h3>Get in Touch</h3>
+                <p class="info-subtitle">
+                  We'd love to hear from you. Reach out anytime!
+                </p>
+                <div class="info-items">
+                  <div class="info-item">
+                    <div class="info-icon">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-details">
+                      <h4>Visit Us</h4>
+                      <p>
+                        123 Travel Street, Business Bay,<br />New York, NY
+                        10001, USA
+                      </p>
+                    </div>
+                  </div>
+                  <div class="info-item">
+                    <div class="info-icon">
+                      <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="info-details">
+                      <h4>Call Us</h4>
+                      <p>+1 (234) 567-8900</p>
+                      <p class="small-text">Toll-free: +1 (800) 123-4567</p>
+                    </div>
+                  </div>
+                  <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="info-details">
+                      <h4>Email Us</h4>
+                      <p>info@flyhightravels.com</p>
+                      <p class="small-text">support@flyhightravels.com</p>
+                    </div>
+                  </div>
+                  <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-clock"></i></div>
+                    <div class="info-details">
+                      <h4>Business Hours</h4>
+                      <p>Mon - Fri: 9:00 AM - 8:00 PM</p>
+                      <p>Saturday: 10:00 AM - 4:00 PM</p>
+                      <p>Sunday: Closed</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="social-connect">
+                  <h4>Connect With Us</h4>
+                  <div class="social-links">
+                    <a href="#" class="social-link"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a href="#" class="social-link"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a href="#" class="social-link"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a href="#" class="social-link"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                    <a href="#" class="social-link"
+                      ><i class="fab fa-youtube"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="map-container">
+            <div class="map-card">
+              <div class="map-header">
+                <i class="fas fa-location-dot"></i>
+                <h3>Find Us Here</h3>
+              </div>
+              <div class="map-wrapper">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316bb5d7e1%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
+                  width="100%"
+                  height="300"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="cta-container">
+          <div class="floating-element element-1">✈️</div>
+          <div class="floating-element element-2">🌍</div>
+          <div class="floating-element element-3">🏝️</div>
+          <div class="floating-element element-4">⛰️</div>
+          <div class="cta-content">
+            <div class="cta-badge">
+              <span class="badge-icon">🌟</span>
+              Limited Time Offer
+            </div>
+            <h2 class="cta-heading">
+              Ready to Start <span class="highlight">Your Journey?</span>
+            </h2>
+            <p class="cta-description">
+              Your next adventure is just one click away. Let's make your dream
+              vacation a reality with exclusive deals and personalized travel
+              plans.
+            </p>
+            <div class="cta-buttons">
+              <a href="#" class="btn-primary">
+                <span class="btn-icon">🟠</span>
+                Book Your Trip Now
+                <span class="btn-arrow">→</span>
+              </a>
+              <a href="#" class="btn-secondary">
+                <span class="btn-icon">📞</span>
+                Call Expert
+              </a>
+            </div>
+            <div class="trust-indicators">
+              <div class="trust-item">
+                <span class="trust-icon">✅</span><span>100% Refundable</span>
+              </div>
+              <div class="trust-divider"></div>
+              <div class="trust-item">
+                <span class="trust-icon">🛡️</span><span>Secure Booking</span>
+              </div>
+              <div class="trust-divider"></div>
+              <div class="trust-item">
+                <span class="trust-icon">💎</span
+                ><span>Best Price Guarantee</span>
+              </div>
+              <div class="trust-divider"></div>
+              <div class="trust-item">
+                <span class="trust-icon">⭐</span><span>4.9/5 Rating</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section (Single, Clean) -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-logo">
+              <img
+                src="flyhigh travels.png"
+                alt="Flyhigh Travels"
+                height="80px"
+              />
+            </div>
+            <p class="footer-description">
+              Your gateway to unforgettable adventures worldwide. We create
+              personalized travel experiences that last a lifetime.
+            </p>
+            <div class="social-icons">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3 class="footer-col-title">Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="#home">🏠 Home</a></li>
+              <li><a href="#packages">📦 Packages</a></li>
+              <li><a href="#destinations">🌍 Destinations</a></li>
+              <li><a href="#about">ℹ️ About Us</a></li>
+              <li><a href="#contact">📞 Contact</a></li>
+              <li><a href="#Testimonials">⭐ Reviews</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3 class="footer-col-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="#">✈️ Flight Booking</a></li>
+              <li><a href="#">🏨 Hotel Booking</a></li>
+              <li><a href="#">🛂 Visa Services</a></li>
+              <li><a href="#">👨‍✈️ Tour Guides</a></li>
+              <li><a href="#">🛡️ Travel Insurance</a></li>
+              <li><a href="#">🚗 Car Rentals</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3 class="footer-col-title">Contact Info</h3>
+            <ul class="footer-contact">
+              <li>
+                <span class="contact-icon">📍</span
+                ><span
+                  >123 Travel Street, Business Bay,<br />New York, NY 10001,
+                  USA</span
+                >
+              </li>
+              <li>
+                <span class="contact-icon">📞</span
+                ><span>+1 (234) 567-8900</span>
+              </li>
+              <li>
+                <span class="contact-icon">📧</span
+                ><span>info@flyhightravels.com</span>
+              </li>
+              <li>
+                <span class="contact-icon">🕒</span
+                ><span>Mon - Sat: 9AM - 8PM</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-content">
+            <p>&copy; 2026 Flyhigh Travels | All Rights Reserved</p>
+            <div class="footer-bottom-links">
+              <a href="#">Privacy Policy</a>
+              <span class="separator">|</span>
+              <a href="#">Terms of Service</a>
+              <span class="separator">|</span>
+              <a href="#">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="booking-modal">
+      <div class="modal-container">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2><i class="fas fa-plane-departure"></i> Book Your Dream Trip</h2>
+            <p>Fill the details below and our travel expert will contact you</p>
+            <button class="close-modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form id="bookingForm">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label
+                    ><i class="fas fa-user"></i> Full Name
+                    <span class="required">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Enter your full name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label
+                    ><i class="fas fa-envelope"></i> Email Address
+                    <span class="required">*</span></label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="your@email.com"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label
+                    ><i class="fas fa-phone"></i> Phone Number
+                    <span class="required">*</span></label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    placeholder="+1 234 567 8900"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label
+                    ><i class="fas fa-globe"></i> Destination
+                    <span class="required">*</span></label
+                  >
+                  <select id="destination" required>
+                    <option value="">Select destination</option>
+                    <option value="bali">🌴 Bali, Indonesia</option>
+                    <option value="paris">🗼 Paris, France</option>
+                    <option value="maldives">🏝️ Maldives</option>
+                    <option value="switzerland">🏔️ Switzerland</option>
+                    <option value="thailand">🛕 Thailand</option>
+                    <option value="dubai">🏙️ Dubai, UAE</option>
+                    <option value="goa">🏖️ Goa, India</option>
+                    <option value="manali">🏔️ Manali, India</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label
+                    ><i class="fas fa-calendar-alt"></i> Travel Date
+                    <span class="required">*</span></label
+                  >
+                  <input type="date" id="travelDate" required />
+                </div>
+                <div class="form-group">
+                  <label
+                    ><i class="fas fa-calendar-check"></i> Return Date</label
+                  >
+                  <input type="date" id="returnDate" />
+                </div>
+                <div class="form-group">
+                  <label
+                    ><i class="fas fa-users"></i> Travelers
+                    <span class="required">*</span></label
+                  >
+                  <div class="traveler-select">
+                    <div class="traveler-count">
+                      <span>👤 Adults (12+)</span>
+                      <div class="counter">
+                        <button
+                          type="button"
+                          class="counter-btn minus"
+                          data-type="adults"
+                        >
+                          -
+                        </button>
+                        <span id="adultsCount">2</span>
+                        <button
+                          type="button"
+                          class="counter-btn plus"
+                          data-type="adults"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="traveler-count">
+                      <span>👶 Children (2-12)</span>
+                      <div class="counter">
+                        <button
+                          type="button"
+                          class="counter-btn minus"
+                          data-type="children"
+                        >
+                          -
+                        </button>
+                        <span id="childrenCount">0</span>
+                        <button
+                          type="button"
+                          class="counter-btn plus"
+                          data-type="children"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="traveler-count">
+                      <span>🍼 Infants (0-2)</span>
+                      <div class="counter">
+                        <button
+                          type="button"
+                          class="counter-btn minus"
+                          data-type="infants"
+                        >
+                          -
+                        </button>
+                        <span id="infantsCount">0</span>
+                        <button
+                          type="button"
+                          class="counter-btn plus"
+                          data-type="infants"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-gift"></i> Package Type</label>
+                  <select id="packageType">
+                    <option value="standard">📦 Standard Package</option>
+                    <option value="deluxe">✨ Deluxe Package</option>
+                    <option value="premium">💎 Premium Package</option>
+                    <option value="luxury">👑 Luxury Package</option>
+                  </select>
+                </div>
+                <div class="form-group full-width">
+                  <label
+                    ><i class="fas fa-comment-dots"></i> Special Requests</label
+                  >
+                  <textarea
+                    id="specialRequests"
+                    rows="3"
+                    placeholder="Any special requests? (Dietary, accessibility, room preferences, etc.)"
+                  ></textarea>
+                </div>
+                <div class="form-group full-width">
+                  <label class="checkbox-label">
+                    <input type="checkbox" id="newsletter" checked />
+                    <span
+                      >📧 Subscribe to receive exclusive travel deals and
+                      offers</span
+                    >
+                  </label>
+                </div>
+              </div>
+              <button type="submit" class="submit-btn" id="submitBtn">
+                <span class="btn-normal"
+                  ><span>Confirm Booking</span>
+                  <i class="fas fa-arrow-right"></i
+                ></span>
+                <span class="btn-loading" style="display: none"
+                  ><div class="spinner-small"></div>
+                  <span>Processing...</span></span
+                >
+                <span class="btn-success" style="display: none"
+                  ><i class="fas fa-check-circle"></i><span>Booked!</span></span
+                >
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="bookingToast" class="booking-toast">
+      <div class="toast-content">
+        <i class="fas fa-check-circle"></i>
+        <div>
+          <h4>Booking Request Sent!</h4>
+          <p>We'll contact you within 24 hours to confirm your trip.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

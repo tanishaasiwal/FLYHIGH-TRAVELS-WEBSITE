@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fef8f0;
+  font-family: "Inter", sans-serif;
+  color: #1e2a32;
+  scroll-behavior: smooth;
+}
+
+/* main container */
+.beach-detail-page {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem 3rem;
+  background: #ffffff;
+  border-radius: 56px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+}
+
+/* back navigation button */
+.back-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #1e3c42;
+  color: white;
+  padding: 0.75rem 1.6rem;
+  border-radius: 60px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+  margin-bottom: 2rem;
+  border: none;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+}
+
+.back-nav:hover {
+  background: #c97e3e;
+  gap: 1rem;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(201, 126, 62, 0.3);
+}
+
+/* hero section with main image and intro */
+.hero-beach {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-bottom: 3.5rem;
+  background: linear-gradient(145deg, #fffaf3, #fff5ea);
+  border-radius: 48px;
+  padding: 1.8rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+}
+
+.hero-image {
+  flex: 1.2;
+  min-width: 280px;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.15);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s;
+  max-height: 420px;
+}
+
+.hero-image:hover img {
+  transform: scale(1.02);
+}
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #006064, #d48f3b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.5px;
+}
+
+.location-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #b5641a;
+}
+
+.location-badge i {
+  font-size: 1.1rem;
+  color: #d68b45;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #4a6572;
+  background: #f0e8dd;
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  border-radius: 40px;
+  width: fit-content;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.description-text {
+  font-size: 1.06rem;
+  line-height: 1.55;
+  color: #2c3e44;
+  margin: 0.8rem 0 1.2rem;
+}
+
+.highlights {
+  display: flex;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  padding: 0.5rem 1.1rem;
+  border-radius: 50px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  border: 1px solid #ffefdf;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #b36b2a;
+}
+
+/* stats / info cards */
+.stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  background: #fefaf2;
+  border-radius: 40px;
+  padding: 1.5rem;
+}
+
+.stat-card {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 1.2rem;
+  text-align: center;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.02);
+  border: 1px solid #faeedf;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card i {
+  font-size: 2rem;
+  color: #d58e45;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.stat-card p {
+  font-size: 0.85rem;
+  color: #5e6f73;
+}
+
+/* RELATED IMAGES GALLERY (grid) */
+.related-section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-left: 6px solid #e0b27c;
+  padding-left: 1.2rem;
+}
+
+.section-title i {
+  color: #c18545;
+  font-size: 1.8rem;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+.related-card {
+  background: #ffffff;
+  border-radius: 32px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 12px 22px -8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f2e6da;
+  cursor: pointer;
+}
+
+.related-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.12);
+}
+
+.related-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.card-caption {
+  padding: 1rem;
+  font-weight: 500;
+  text-align: center;
+  background: #fffdf9;
+  font-size: 0.9rem;
+  color: #7a5a3a;
+}
+
+.card-caption i {
+  margin-right: 6px;
+  color: #e0a56b;
+}
+
+/* travel insight / tip section */
+.travel-insight {
+  margin-top: 2.8rem;
+  background: #eef3ea;
+  border-radius: 40px;
+  padding: 1.6rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.insight-text {
+  flex: 2;
+}
+
+.insight-text strong {
+  font-size: 1.15rem;
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #2c5a2e;
+}
+
+.insight-text p {
+  color: #3d5a3c;
+}
+
+.insight-icon {
+  font-size: 2.5rem;
+  background: white;
+  width: 65px;
+  height: 65px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cf893c;
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f0e2d2;
+  font-size: 0.75rem;
+  color: #9c8976;
+}
+
+/* loading animation for related images */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.related-card {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* responsive adjustments */
+@media (max-width: 760px) {
+  .beach-detail-page {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .hero-beach {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-image,
+  .hero-content {
+    width: 100%;
+  }
+  .hero-image {
+    min-width: auto;
+  }
+  .hero-image img {
+    max-height: 380px;
+  }
+  .hero-content {
+    justify-content: center;
+  }
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .stats-row {
+    flex-direction: column;
+  }
+}
